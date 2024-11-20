@@ -22,4 +22,4 @@ npm start
 
 ## memo
 
-memo.md に記載
+[memo.md](https://github.com/HKRK8569/remix-tutorial/blob/main/memo.md) に記載
