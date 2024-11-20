@@ -2,6 +2,8 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+https://remix.run/docs/en/main/start/tutorial
+
 ## Development
 
 From your terminal:
