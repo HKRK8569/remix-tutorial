@@ -18,11 +18,15 @@ export const links: LinksFunction = () => [
 ];
 
 export const loader = async () => {
+  // ?
   const contacts = await getContacts();
   return json({ contacts });
 };
 
 export default function App() {
+  {
+    /* ? */
+  }
   const { contacts } = useLoaderData<typeof loader>();
   return (
     <html lang="en">
@@ -76,6 +80,7 @@ export default function App() {
           </nav>
         </div>
         <div id="detail">
+          {/* ? */}
           <Outlet />
         </div>
         <ScrollRestoration />
