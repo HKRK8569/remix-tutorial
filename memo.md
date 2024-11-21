@@ -4,10 +4,16 @@
 
 routes ディレクトリにファイル追加でルーティングを行える
 <Outlet />の部分が url に応じたコンポーネントが呼び出される
-例:contacts.$contactId.tsx
+contacts.$contactId.tsx
 
 ```
 /contacts/${contactId}
+```
+
+contacts.$contactId\_.edit.tsx
+
+```
+/contacts/${alex-anderson}/edit
 ```
 
 ## Link
