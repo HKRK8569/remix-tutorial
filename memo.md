@@ -16,6 +16,14 @@ contacts.$contactId\_.edit.tsx
 /contacts/${alex-anderson}/edit
 ```
 
+## redirect
+
+redirect 関数を利用するとリダイレクトが行える
+
+```
+return redirect(`/contacts/${params.contactId}`);
+```
+
 ## Link
 
 Link を利用してページ移動をおこなう
@@ -42,7 +50,7 @@ const { contact } = useLoaderData<typeof loader>();
 
 ## action
 
-データを更新する際に使う関数、POST,DELETE,PUT,PATCH リクエストが送られたタイミングで実行される
+データを更新する際に使う関数、POST,DELETE,PUT,PATCH リクエストが送られたタイミングでサーバー側で実行される
 
 ```
 export const action = async ({ params, request }: ActionFunctionArgs) => {
