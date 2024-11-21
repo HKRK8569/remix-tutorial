@@ -39,3 +39,21 @@ export const loader = async () => {
 
 const { contact } = useLoaderData<typeof loader>();
 ```
+
+## action
+
+データを更新する際に使う関数、POST,DELETE,PUT,PATCH リクエストが送られたタイミングで実行される
+
+```
+export const action = async ({ params, request }: ActionFunctionArgs) => {
+  invariant(params.contactId, "Missing contactId param");
+  const formData = await request.formData();
+  const updates = Object.fromEntries(formData);
+  await updateContact(params.contactId, updates);
+  return redirect(`/contacts/${params.contactId}`);
+};
+
+<Form key={contact.id} id="contact-form" method="post">
+    <button type="submit">Save</button>
+</Form>
+```
