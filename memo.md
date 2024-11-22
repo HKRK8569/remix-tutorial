@@ -34,6 +34,18 @@ import { Link } from "@remix-run/react";
 <Link to={`contacts/${contact.id}`}>hoge</Link>
 ```
 
+## NavLink
+
+to と同じ url にいる場合 isActive が true になる Link
+
+```
+<NavLink to="/tasks">
+  {({ isActive, isPending }) => (
+    <span className={isActive ? "active" : ""}>Tasks</span>
+  )}
+</NavLink>
+```
+
 ## useLoaderData
 
 loader 関数の結果をコンポーネントで取得するための Hook
