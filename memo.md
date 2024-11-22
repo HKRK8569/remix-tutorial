@@ -16,6 +16,12 @@ contacts.$contactId\_.edit.tsx
 /contacts/${alex-anderson}/edit
 ```
 
+\_index.tsx
+
+```
+/
+```
+
 ## redirect
 
 redirect 関数を利用するとリダイレクトが行える
