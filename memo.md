@@ -46,6 +46,26 @@ to と同じ url にいる場合 isActive が true になる Link
 </NavLink>
 ```
 
+## useNavigation
+
+保留中のページ遷移の情報を取得する
+
+状態を取得
+
+```
+const navigation = useNavigation();
+className={
+  navigation.state === "loading" ? "loading" : ""
+}
+```
+
+次の遷移先を取得
+
+```
+  const navigation = useNavigation();
+  console.log(navigation.location);
+```
+
 ## useLoaderData
 
 loader 関数の結果をコンポーネントで取得するための Hook
