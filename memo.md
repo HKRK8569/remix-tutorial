@@ -68,8 +68,18 @@ className={
 次の遷移先を取得
 
 ```
-  const navigation = useNavigation();
-  console.log(navigation.location);
+const navigation = useNavigation();
+console.log(navigation.location);
+```
+
+ブラウザを一つ前に戻す
+
+```
+const navigate = useNavigate();
+
+<button onClick={() => navigate(-1)} type="button">
+  Cancel
+</button>
 ```
 
 ## useLoaderData
