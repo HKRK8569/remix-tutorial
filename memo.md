@@ -127,6 +127,19 @@ const submit = useSubmit();
 />
 ```
 
+## useFetcher
+
+履歴に残したくない場合に useFetcher を利用する
+
+```
+const fetcher = useFetcher();
+return (
+  <fetcher.Form method="post" action="/some/route">
+    <input type="text" />
+  </fetcher.Form>
+);
+```
+
 ## action
 
 データを更新する際に使う関数、POST,DELETE,PUT,PATCH リクエストが送られたタイミングでサーバー側で実行される
