@@ -54,6 +54,14 @@ to と同じ url にいる場合 isActive が true になる Link
 
 ## useNavigation
 
+searchParams を取得
+
+```
+const navigation = useNavigation();
+// ?hoge=testのような形で出力される
+console.log(navigation.location.search)
+```
+
 保留中のページ遷移の情報を取得する
 
 状態を取得
@@ -67,10 +75,14 @@ className={
 
 次の遷移先を取得
 
+何も起こっていない際は undefined になる
+
 ```
 const navigation = useNavigation();
 console.log(navigation.location);
 ```
+
+## useNavigate
 
 ブラウザを一つ前に戻す
 
