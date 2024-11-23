@@ -96,6 +96,20 @@ export const loader = async () => {
 const { contact } = useLoaderData<typeof loader>();
 ```
 
+## useSubmit
+
+Form の submit をコード上で実行するための hook
+
+```
+const submit = useSubmit();
+
+<Form
+  onChange={(event) => {
+    submit(event.currentTarget);
+  }}
+/>
+```
+
 ## action
 
 データを更新する際に使う関数、POST,DELETE,PUT,PATCH リクエストが送られたタイミングでサーバー側で実行される
