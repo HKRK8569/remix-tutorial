@@ -111,13 +111,18 @@ const { contact } = useLoaderData<typeof loader>();
 ## useSubmit
 
 Form の submit をコード上で実行するための hook
+オプションの replace が ture の際は現在の履歴を置き換える
+※履歴が荒れてしまうのを防いだりする
 
 ```
 const submit = useSubmit();
 
 <Form
   onChange={(event) => {
-    submit(event.currentTarget);
+    const isFirstSearch = q === null;
+    submit(event.currentTarget, {
+      replace: !isFirstSearch,
+    });
   }}
 />
 ```
